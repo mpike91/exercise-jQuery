@@ -1,0 +1,36 @@
+// // 1
+$(function() {
+    console.log("Let's get ready to party with jQuery!");
+});
+
+// 2
+$("article img").addClass("image-center");
+
+// 3
+$("p").eq(5).remove();
+
+// 4
+const randSize = () => Math.floor(Math.random()*101);
+$("#title").css("font-size", randSize());
+
+// 5
+$("ol").append("<li>YOOOOOO!</li>");
+// $("<li>LOLOLOLOL OK</li>").appendTo("ol");
+
+// 6 
+$("aside *").remove();
+$("aside").append("<p>Sorry for the list's existence!</p>");
+
+// 7
+$(".mb-5").on("change", function(){
+    const $r = $("input").eq(0).val();
+    const $g = $("input").eq(1).val();
+    const $b = $("input").eq(2).val();
+    $("body").css("background-color", `rgb(${$r} ${$b} ${$g})`);
+});
+
+// 8
+$("img").on("click", function(){
+    // this.remove();
+    $(this).remove();
+})
